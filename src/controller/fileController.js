@@ -29,8 +29,6 @@ class FileController extends BaseController {
   async downloadFile(req, res) {
     try {
       const fileName = req.params.file[0];
-      console.log('fileName', FILES_DIR + '/' + fileName);
-    //   const filePath = await this.fileService.downloadFile(fileName);
       return res.download(FILES_DIR + '/' + fileName);
     } catch (error) {
       return res.status(500).json({ message: 'Error downloading file', error: error.message });
