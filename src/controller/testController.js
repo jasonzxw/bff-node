@@ -1,10 +1,8 @@
-const express = require('express')
-const router = express.Router();
 const testService = require('../service/testService.js');
-
-class TestController {
+const BaseController = require('./BaseController.js');
+class TestController extends BaseController {
     constructor() {
-        this.router = router;
+        super();
         this.initializeRoutes();
     }
 
