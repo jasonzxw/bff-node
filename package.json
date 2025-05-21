@@ -1,0 +1,22 @@
+{
+  "name": "bff-node",
+  "version": "1.0.0",
+  "description": "This is nodejs backend based express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonzxw/bff-node.git"
+  },
+  "author": "jason_zuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonzxw/bff-node/issues"
+  },
+  "homepage": "https://github.com/jasonzxw/bff-node#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
