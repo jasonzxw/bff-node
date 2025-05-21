@@ -1,5 +1,6 @@
 const testService = require('../service/testService.js');
 const BaseController = require('./BaseController.js');
+const apiMapping = require('../config/apiMapping.js');
 class TestController extends BaseController {
     constructor() {
         super();
@@ -7,7 +8,7 @@ class TestController extends BaseController {
     }
 
     initializeRoutes() {
-        this.router.get('/user', this.handleTest);
+        this.router.get(apiMapping.test.user, this.handleTest);
     }
 
     handleTest(req, res) {

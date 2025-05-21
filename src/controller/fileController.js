@@ -22,7 +22,8 @@ class FileController extends BaseController {
     //   const result = await this.fileService.uploadFile(file);
       return res.status(200).json({ message: 'File uploaded successfully', data: result });
     } catch (error) {
-      return res.status(500).json({ message: 'Error uploading file', error: error.message });
+        // Handle error
+        return this.outputRsp(req, res, 500, { message: 'Error uploading file', error: error.message });
     }
   }
 
@@ -31,7 +32,7 @@ class FileController extends BaseController {
       const fileName = req.params.file[0];
       return res.download(FILES_DIR + '/' + fileName);
     } catch (error) {
-      return res.status(500).json({ message: 'Error downloading file', error: error.message });
+      return this.outputRsp(req, res, 500, { message: 'Error downloading file', error: error.message });
     }
   }
 }

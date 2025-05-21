@@ -1,3 +1,4 @@
+// validate Token or session
 function validateToken(req,res,next){
     console.log('validateToken');
     // 1. 获取token
